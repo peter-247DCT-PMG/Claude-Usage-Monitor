@@ -13,7 +13,6 @@ import '../../models/connection_status.dart';
 import '../../models/limit_window.dart';
 import '../../models/usage_snapshot.dart';
 import '../../services/statusline_bridge_service.dart';
-import '../../widgets/about_card.dart';
 import '../../widgets/activity_card.dart';
 import '../../widgets/api_card.dart';
 import '../../widgets/app_button.dart';
@@ -134,7 +133,6 @@ class DashboardPage extends StatelessWidget {
         DevicesCard(result: snap.devices, motion: motion, clock: usage.clock, opacity: settings.transparency),
       _CliCard(cli: snap.cli, snapshot: snap, opacity: settings.transparency),
       HealthCard(snapshot: snap, motion: motion, clock: usage.clock, opacity: settings.transparency),
-      AboutCard(motion: motion, opacity: settings.transparency),
     ];
 
     return GlassPanel(
